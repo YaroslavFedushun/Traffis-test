@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main {
+  background-image: url('../images/main-bg.png');
+  background-size: cover;
+  min-height: 60vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.logo {
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav-links {
+  flex: 2;
+  font-family: Rubik;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
