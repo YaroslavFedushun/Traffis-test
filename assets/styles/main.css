@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+.m-v-5vw {
+  margin: 5vw 0;
+}
+
 :root {
   /* colors */
   --main-dark-color: #292D32;
@@ -40,7 +44,6 @@
 .main {
   background-image: url('../images/main-bg.png');
   background-size: cover;
-  min-height: 60vh;
   cursor: pointer;
 }
 
@@ -57,6 +60,10 @@
 .menu {
   display: flex;
   justify-content: space-evenly;
+}
+
+.burger-menu {
+  display: none;
 }
 
 .menu a {
@@ -185,8 +192,7 @@
 /* Our Product */
 .our-product {
   text-align: center;
-  height: 80vh;
-  margin: 150px 0;
+  height: 40vw;
 }
 
 
@@ -198,6 +204,7 @@
   background-repeat: no-repeat;
   width: 70vw;
   margin: auto;
+  border-radius: 30px;
 }
 
 
@@ -206,6 +213,7 @@
 /* APP */
 .app {
   text-align: center;
+  margin-top: 15vw;
 }
 
 
@@ -223,8 +231,8 @@
 }
 
 .app-information-img {
-  background-image: url('../images/figures.png');
-  background-size: cover;
+  background-image: url('../images/app-info.png');
+  background-size: contain;
   background-repeat: no-repeat;
   width: 50vw;
   min-height: 50vw;

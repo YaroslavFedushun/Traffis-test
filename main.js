@@ -1,5 +1,3 @@
-const Swal = require('sweetalert2')
-
 
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -30,6 +28,5 @@ function send() {
     }
     else
     swal("Great!", "We'll get back to you soon!", "success");
-    console.log(formData);
     console.log(result);
 }

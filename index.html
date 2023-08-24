@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles/main.css" />
+  <link rel="stylesheet" href="./assets/styles/responsive.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -32,38 +33,64 @@
         <!-- NAVIGATION MENUS -->
         <div class="menu">
 
-          <dt><span  onclick="smoothScroll('#main')">Main</span></dt>
-          <dt><span  onclick="smoothScroll('#about-us')">About Us</span></dt>
-          <dt><span  onclick="smoothScroll('#features')">Features</span></dt>
-          <dt><span  onclick="smoothScroll('#screen-shots')">Screenshots</span></dt>
-          <dt><span  onclick="smoothScroll('#contacts')">Process</span></dt>
-          <dt><span  onclick="smoothScroll('#contacts')">Contacts</span></dt>
-       
-
-          <dt class="menu-burger" style="display: none;">
-            <!-- DROPDOWN MENU -->
-            <dl class="dropdown">
-              <dt><a href="/">Dropdown 1 </a></dt>
-              <dt><a href="/">Dropdown 2</a></dt>
-              <dt><a href="/">Dropdown 2</a></dt>
-              <dt><a href="/">Dropdown 3</a></dt>
-              <dt><a href="/">Dropdown 4</a></dt>
-            </dl>
-
+          <dt>
+            <span  onclick="smoothScroll('#main')">Main</span>
           </dt>
+          <dt>
+            <span  onclick="smoothScroll('#about-us')">About Us</span>
+          </dt>
+          <dt>
+            <span  onclick="smoothScroll('#features')">Features</span>
+          </dt>
+          <dt>
+            <span  onclick="smoothScroll('#screen-shots')">Screenshots</span>
+          </dt>
+          <dt>
+            <span  onclick="smoothScroll('#contacts')">Process</span>
+          </dt>
+          <dt>
+            <span  onclick="smoothScroll('#contacts')">Contacts</span>
+          </dt>
+       
+        </div>
+        <div class="burger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+      
+          <ul class="menu__box">
+            <li>
+              <span  onclick="smoothScroll('#main')">Main</span>
+            </li>
+            <li>
+              <span  onclick="smoothScroll('#about-us')">About Us</span>
+            </li>
+            <li>
+              <span  onclick="smoothScroll('#features')">Features</span>
+            </li>
+            <li>
+              <span  onclick="smoothScroll('#screen-shots')">Screenshots</span>
+            </li>
+            <li>
+              <span  onclick="smoothScroll('#contacts')">Process</span>
+            </li>
+            <li>
+              <span  onclick="smoothScroll('#contacts')">Contacts</span>
+            </li>
+          </ul>
         </div>
       </dl>
     </nav>
     <div class="main-title" id="main">
       <h1>The Name Of The Product</h1>
-      <p>Practice solving your puzzle as fast as possible with random </p>
-      <p>shuffling and a timer with full statistics</p>
+      <p>Practice solving your puzzle as fast as possible with random shuffling and a timer with full statistics</p>
       <button class="main-button" value="Button" onclick="goToPlayMarket()">
         <img src="./assets/images/btn-icon.png" alt="btn-icon">
         GET IT ON <br>
         Google Play</button>
     </div>
-    <div class="main-carousel">
+    <div class="main-carousel lg-carousel">
       <div class="clearfix">
         <div class="col-md-12">
           <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
@@ -78,31 +105,29 @@
             </ol>
             <!-- Wrapper for carousel items -->
             <div class="carousel-inner">
-
-
               <div class="item carousel-item active">
                 <div class="row">
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 col-md-3 ">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-sm-6 col-md-4 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 col-md-3 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
@@ -113,27 +138,27 @@
 
               <div class="item carousel-item">
                 <div class="row">
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 ">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-4 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
@@ -141,31 +166,29 @@
                 </div>
               </div>
 
-
-
-              <div class="item carousel-item ">
+              <div class="item carousel-item">
                 <div class="row">
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 ">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-4 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
@@ -173,31 +196,29 @@
                 </div>
               </div>
 
-
-
-              <div class="item carousel-item ">
+              <div class="item carousel-item">
                 <div class="row">
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 ">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-4 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
@@ -206,29 +227,29 @@
               </div>
 
 
-              <div class="item carousel-item ">
+                     <div class="item carousel-item">
                 <div class="row">
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 ">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-4 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
@@ -237,37 +258,35 @@
               </div>
 
 
-
-              <div class="item carousel-item ">
+              <div class="item carousel-item">
                 <div class="row">
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 ">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-4">
+                  <div class="col-sm-4 col-md-4 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3 d-sm-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
                     <div class="thumb-wrapper">
                       <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
                 </div>
               </div>
-
 
 
             </div>
@@ -287,7 +306,7 @@
   <!-----   OUR PRODUCT BLOCK   -->
 
   <div class="our-product" id="about-us">
-    <h1 class="secondary-title">What is new in our product</h1>
+    <h1 class="secondary-title m-v-5vw">What is new in our product</h1>
     <div class="our-product-video">
 
     </div>
@@ -382,12 +401,17 @@
 
                 <div class="item carousel-item active">
                   <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-md-5 col-sm-3">
                       <div class="thumb-wrapper">
                         <img src="./assets/images/slide.png" class="img-fluid" alt="">
                       </div>
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-md-5 col-sm-6 d-sm-none d-lg-none d-tablet-none">
+                      <div class="thumb-wrapper">
+                        <img src="./assets/images/slide.png" class="img-fluid" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-7  col-sm-3 d-tablet-none">
                       <div class="thumb-wrapper">
                         <img src="./assets/images/slide.png" class="img-fluid" alt="">
                       </div>
@@ -509,7 +533,7 @@
   <!-- FEED BACK -->
   <div class="feed-back" id="contacts">
    <div class="feed-back-form">
-    <h2>Text review</h2>
+    <h2 class="d-tablet-none">Text review</h2>
     <form id="form">
       <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
@@ -530,7 +554,7 @@
     <h1 class="secondary-title">Looking for an excellent business idea?</h1>
     <p>Give us a call or email anytime, we strive to answer all <br>
        inquiries within 24 hours on business days.</p>
-       <img src="./assets/images/figures.png" alt="Feed Back">
+       <img class="d-tablet-none" src="./assets/images/figures.png" alt="Feed Back">
    </div>
   </div>
  
