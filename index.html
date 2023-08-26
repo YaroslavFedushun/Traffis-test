@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="./assets/styles/main.css">
-    <link rel="stylesheet" href="./assets/styles/responsive.css">
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"
-    ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/main.css">
+  <link rel="stylesheet" href="./assets/styles/responsive.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-    <title>Traffis</title>
-  </head>
+  <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 
-  <body>
-    <!--  MAIN BLOCK   -->
-    <header class="main">
-      <nav class="navbar">
-        <!-- LOGO -->
-        <div class="logo">
-          <img src="./assets/images/logo.png" alt="Logo Here!">
-        </div>
+  <title>Traffis</title>
+</head>
 
-        <!-- NAVIGATION MENU -->
-        <!-- NAVIGATION MENUS -->
-        <div class="nav-links">
-          <ul class="menu">
+<body>
+  <!--  MAIN BLOCK   -->
+  <header class="main">
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="Logo Here!">
+      </div>
+
+      <!-- NAVIGATION MENU -->
+      <!-- NAVIGATION MENUS -->
+      <div class="nav-links">
+        <ul class="menu">
+          <li>
+            <span onclick="smoothScroll('#main')">Main</span>
+          </li>
+          <li>
+            <span onclick="smoothScroll('#about-us')">About Us</span>
+          </li>
+          <li>
+            <span onclick="smoothScroll('#features')">Features</span>
+          </li>
+          <li>
+            <span onclick="smoothScroll('#screen-shots')">Screenshots</span>
+          </li>
+          <li>
+            <span onclick="smoothScroll('#contacts')">Process</span>
+          </li>
+          <li>
+            <span onclick="smoothScroll('#contacts')">Contacts</span>
+          </li>
+        </ul>
+      </div>
+      <form>
+        <div class="burger-menu">
+          <input id="menu__toggle" type="checkbox">
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+
+          <ul class="menu__box">
             <li>
               <span onclick="smoothScroll('#main')">Main</span>
             </li>
@@ -62,368 +82,210 @@
             </li>
           </ul>
         </div>
-        <form>
-          <div class="burger-menu">
-            <input id="menu__toggle" type="checkbox">
-            <label class="menu__btn" for="menu__toggle">
-              <span></span>
-            </label>
-
-            <ul class="menu__box">
-              <li>
-                <span onclick="smoothScroll('#main')">Main</span>
-              </li>
-              <li>
-                <span onclick="smoothScroll('#about-us')">About Us</span>
-              </li>
-              <li>
-                <span onclick="smoothScroll('#features')">Features</span>
-              </li>
-              <li>
-                <span onclick="smoothScroll('#screen-shots')">Screenshots</span>
-              </li>
-              <li>
-                <span onclick="smoothScroll('#contacts')">Process</span>
-              </li>
-              <li>
-                <span onclick="smoothScroll('#contacts')">Contacts</span>
-              </li>
-            </ul>
-          </div>
-        </form>
-      </nav>
-      <div class="main-title" id="main">
-        <h1>The Name Of The Product</h1>
-        <p>
-          Practice solving your puzzle as fast as possible with random shuffling
-          and a timer with full statistics
-        </p>
-        <button class="main-button" value="Button" onclick="goToPlayMarket()">
-          <img src="./assets/images/btn-icon.png" alt="btn-icon">
-          GET IT ON <br>
-          Google Play
-        </button>
-      </div>
-      <div class="main-carousel lg-carousel">
-        <div class="clearfix">
-          <div class="col-md-12">
-            <div
-              id="myCarousel"
-              class="carousel slide"
-              data-ride="carousel"
-              data-interval="0"
-            >
-              <!-- Carousel indicators -->
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#myCarousel"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-                <li data-target="#myCarousel" data-slide-to="5"></li>
-              </ol>
-              <!-- Wrapper for carousel items -->
-              <div class="carousel-inner">
-                <div class="item carousel-item active">
-                  <div class="row">
-                    <div class="col-sm-1 col-md-1 d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+      </form>
+    </nav>
+    <div class="main-title" id="main">
+      <h1>The Name Of The Product</h1>
+      <p>
+        Practice solving your puzzle as fast as possible with random shuffling
+        and a timer with full statistics
+      </p>
+      <button class="main-button" value="Button" onclick="goToPlayMarket()">
+        <img src="./assets/images/btn-icon.png" alt="btn-icon">
+        GET IT ON <br>
+        Google Play
+      </button>
+    </div>
+    <div class="main-carousel lg-carousel">
+      <div class="clearfix">
+        <div class="col-md-12">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+              <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+              <div class="item carousel-item active">
+                <div class="row">
+                  <div class="col-sm-1 col-md-1 d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-3 col-md-3">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-3 col-md-3">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-6 col-md-4 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-3 col-md-3 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-3 col-md-3 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="item carousel-item">
-                  <div class="row">
-                    <div class="col-sm-1 col-md-1 d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+              <div class="item carousel-item">
+                <div class="row">
+                  <div class="col-sm-1 col-md-1 d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-4 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-4 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="item carousel-item">
-                  <div class="row">
-                    <div class="col-sm-1 col-md-1 d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+              <div class="item carousel-item">
+                <div class="row">
+                  <div class="col-sm-1 col-md-1 d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-4 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-4 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="item carousel-item">
-                  <div class="row">
-                    <div class="col-sm-1 col-md-1 d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+              <div class="item carousel-item">
+                <div class="row">
+                  <div class="col-sm-1 col-md-1 d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-4 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-4 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="item carousel-item">
-                  <div class="row">
-                    <div class="col-sm-1 col-md-1 d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+              <div class="item carousel-item">
+                <div class="row">
+                  <div class="col-sm-1 col-md-1 d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-4 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-4 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="item carousel-item">
-                  <div class="row">
-                    <div class="col-sm-1 col-md-1 d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+              <div class="item carousel-item">
+                <div class="row">
+                  <div class="col-sm-1 col-md-1 d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-4 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-4 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-4 col-md-3 d-sm-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-3 d-sm-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
-                      <div class="thumb-wrapper">
-                        <img
-                          src="./assets/images/slide.png"
-                          class="img-fluid"
-                          alt=""
-                        >
-                      </div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 d-sm-none d-md-none">
+                    <div class="thumb-wrapper">
+                      <img src="./assets/images/slide.png" class="img-fluid" alt="">
                     </div>
                   </div>
                 </div>
@@ -432,22 +294,24 @@
           </div>
         </div>
       </div>
-    </header>
-    <!--  END MAIN BLOCK   -->
-     <main> 
+    </div>
+  </header>
+  <!--  END MAIN BLOCK   -->
+  <main>
 
     <!--   OUR PRODUCT BLOCK   -->
-    <article> 
-      <section>
-        <div class="our-product" id="about-us">
+    <section>
+      <div class="our-product" id="about-us">
+        <article>
           <h2 class="secondary-title m-v-5vw">What is new in our product</h2>
           <figure>
             <div class="our-product-video"></div>
           </figure>
-        </div>
-      </section>
-    </article>
-  
+        </article>
+      </div>
+    </section>
+
+
     <!--  END OUR PRODUCT BLOCK   -->
 
     <!-- APP INFORMATION -->
@@ -494,12 +358,12 @@
         </div>
       </section>
     </article>
-   
+
     <!-- END APP INFORMATION -->
 
     <!-- OVERVIEW  -->
     <article>
-      <section> 
+      <section>
         <div class="overview" id="screen-shots">
           <div class="overview-description">
             <h2 class="secondary-title">Overview</h2>
@@ -514,7 +378,7 @@
               the tips.<br>
               - Ivy Cube : solved in 8 moves maximum.
             </p>
-    
+
             <p>
               Practice solving your puzzle as fast as possible with random shuffling
               and a timer with full statistics (SpeedCubing). Learn to solve the
@@ -527,19 +391,10 @@
             <div class="main-carousel">
               <div class="clearfix">
                 <div class="col-md-12">
-                  <div
-                    id="sm-carousel"
-                    class="carousel slide"
-                    data-ride="carousel"
-                    data-interval="0"
-                  >
+                  <div id="sm-carousel" class="carousel slide" data-ride="carousel" data-interval="0">
                     <!-- Carousel indicators -->
                     <ol class="carousel-indicators">
-                      <li
-                        data-target="#sm-carousel"
-                        data-slide-to="0"
-                        class="active"
-                      ></li>
+                      <li data-target="#sm-carousel" data-slide-to="0" class="active"></li>
                       <li data-target="#sm-carousel" data-slide-to="1"></li>
                       <li data-target="#sm-carousel" data-slide-to="2"></li>
                       <li data-target="#sm-carousel" data-slide-to="3"></li>
@@ -552,146 +407,92 @@
                         <div class="row">
                           <div class="col-md-5 col-sm-3">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
-                          <div
-                            class="col-md-5 col-sm-6 d-sm-none d-lg-none d-tablet-none"
-                          >
+                          <div class="col-md-5 col-sm-6 d-sm-none d-lg-none d-tablet-none">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                           <div class="col-md-7 col-sm-3 d-tablet-none">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                         </div>
                       </div>
-    
+
                       <div class="item carousel-item">
                         <div class="row">
                           <div class="col-sm-5">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                           <div class="col-sm-7">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                         </div>
                       </div>
-    
+
                       <div class="item carousel-item">
                         <div class="row">
                           <div class="col-sm-5">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                           <div class="col-sm-7">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                         </div>
                       </div>
-    
+
                       <div class="item carousel-item">
                         <div class="row">
                           <div class="col-sm-5">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                           <div class="col-sm-7">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                         </div>
                       </div>
-    
+
                       <div class="item carousel-item">
                         <div class="row">
                           <div class="col-sm-5">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                           <div class="col-sm-7">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                         </div>
                       </div>
-    
+
                       <div class="item carousel-item">
                         <div class="row">
                           <div class="col-sm-5">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                           <div class="col-sm-7">
                             <div class="thumb-wrapper">
-                              <img
-                                src="./assets/images/slide.png"
-                                class="img-fluid"
-                                alt=""
-                              >
+                              <img src="./assets/images/slide.png" class="img-fluid" alt="">
                             </div>
                           </div>
                         </div>
@@ -702,10 +503,10 @@
               </div>
             </div>
           </div>
-        </div>    
+        </div>
       </section>
     </article>
-   
+
     <!-- END OVERVIEW  -->
 
     <!-- DOWNLOAD -->
@@ -741,33 +542,15 @@
             <form id="form">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  class="form-control"
-                  id="name"
-                  placeholder="Name"
-                >
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name">
               </div>
               <div class="form-group">
                 <label for="email">Email address</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Enter email"
-                >
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="5"
-                  placeholder="Message"
-                  name="message"
-                ></textarea>
+                <textarea class="form-control" id="message" rows="5" placeholder="Message" name="message"></textarea>
               </div>
               <button type="button" class="btn btn-primary" onclick="send()">
                 Send
@@ -780,50 +563,42 @@
               Give us a call or email anytime, we strive to answer all <br>
               inquiries within 24 hours on business days.
             </p>
-            <img
-              class="d-tablet-none"
-              src="./assets/images/figures.png"
-              alt="Feed Back"
-            >
+            <img class="d-tablet-none" src="./assets/images/figures.png" alt="Feed Back">
           </div>
-        </div>    
+        </div>
       </section>
     </article>
-   
+
     <!-- END FEED BACK -->
-    
-    </main>
-    <!-- FOOTER -->
-    <footer id="main-footer">
-      <div class="footer">
-        <div class="social">
-          <div class="social-links">
-            <a
-              ><img src="./assets/images/facebook.png" alt="facebook-link"
-            ></a>
-            <a
-              ><img src="./assets/images/instagram.png" alt="instagram-link"
-            ></a>
-            <a><img src="./assets/images/twitter.png" alt="twitter-link"></a>
-          </div>
-          <span
-            >©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            Name | ALL RIGHTS RESERVED
-          </span>
+
+  </main>
+  <!-- FOOTER -->
+  <footer id="main-footer">
+    <div class="footer">
+      <div class="social">
+        <div class="social-links">
+          <a><img src="./assets/images/facebook.png" alt="facebook-link"></a>
+          <a><img src="./assets/images/instagram.png" alt="instagram-link"></a>
+          <a><img src="./assets/images/twitter.png" alt="twitter-link"></a>
         </div>
-        <div class="privacy">
-          <a href="">
-            <span>Private Policy</span>
-          </a>
-          <a href="">
-            <span>Term of Use</span>
-          </a>
-        </div>
+        <span>©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Name | ALL RIGHTS RESERVED
+        </span>
       </div>
-    </footer>
-    <!-- END FOOTER -->
-  </body>
+      <div class="privacy">
+        <a href="">
+          <span>Private Policy</span>
+        </a>
+        <a href="">
+          <span>Term of Use</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</body>
+
 </html>
