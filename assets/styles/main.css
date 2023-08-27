@@ -276,6 +276,10 @@
   flex: 1
 }
 
+.overview-carousel .carousel-indicators li {
+  border-color: var(--main-grey-color);
+}
+
 
 
 /* END OVERVIEW */
